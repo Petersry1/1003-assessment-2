@@ -12,12 +12,12 @@ int main(void){
 	
 	
 	printf("Please enter the text you want to encrypt: \n");
-	printf("You are encrypting:  ");
+	
 
 	
 	fgets(plainText, sizeof(plainText), stdin);
-	
-	
+	printf("You are encrypting: ");
+	printf(plainText);
 	printf("\nThe ciphered text is : ");
 	
 
@@ -32,7 +32,7 @@ void cipher(char* plainText, int key){
 	char cypher;
 	
 	while( plainText[i] != '\0'){//&& strlen(plainText)-1 > i{
-		cypherValue = ((int)plainText[i] -97 + key) + 97;
+		cypherValue = ((int)plainText[i] + key);
 		cypher = (char)(cypherValue);
 		
 		printf("%c", cypher);

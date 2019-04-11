@@ -10,7 +10,7 @@ int main(void){
 	int key = 1;
 	char plainText[101];
 	
-	
+	//hello
 	printf("Please enter the text you want to encrypt: \n");
 	
 

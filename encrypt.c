@@ -8,18 +8,19 @@ int i, x;
    char str[100];
    int choice;
    int key;
-
-   printf("Select an option\n");
+ 
+ printf("\nPlease enter text to cipher: ");
+   gets(str);
+   
+       printf("Select an option\n");
    printf("encrypt - 1\n");
    printf("decrypt - 2\n");
    scanf("%d", &choice);
-
    switch(choice)
 {
       case 1:
       {
-    printf("\nPlease enter text to encrypt:\n");
-   scanf("%s", &str);
+   
    printf("\nSelect key rotation:\n");
    scanf("%d", &key);
     for(i = 0; (i < 100 && str[i] != '\0'); i++)
@@ -30,8 +31,6 @@ int i, x;
 }
       case 2: 
       {
-printf("\nPlease enter text to decrypt:\n");
-   scanf("%s", &str);
    printf("\nSelect key rotation:\n");
    scanf("%d", &key);
     for(i = 0; (i < 100 && str[i] != '\0'); i++)
